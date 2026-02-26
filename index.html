@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>To Do List App</title>
+    <!-- Font & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="todo-card">
+        <div class="header">
+            <h1>
+                <i class="fas fa-check-circle"></i>
+                daily smooth
+            </h1>
+            <div class="sub">mark done · filter tasks</div>
+        </div>
+
+        <!-- add task -->
+        <div class="add-task">
+            <div class="input-wrapper">
+                <input type="text" id="taskInput" placeholder="write a task ..." autocomplete="off">
+            </div>
+            <button class="add-btn" id="addTaskBtn" aria-label="add task">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+        <!-- filter tabs: All, Active, Completed -->
+        <div class="tabs">
+            <button class="tab active" id="tabAll"><i class="fas fa-list-ul"></i> All</button>
+            <button class="tab" id="tabActive"><i class="fas fa-circle-notch"></i> Active</button>
+            <button class="tab" id="tabCompleted"><i class="fas fa-check-circle"></i> Completed</button>
+        </div>
+
+        <!-- status bar with counter and clear -->
+        <div class="status-bar">
+            <span class="task-counter" id="taskCounter">0 tasks</span>
+            <button class="clear-all" id="clearAllBtn"><i class="far fa-trash-alt"></i> clear all</button>
+        </div>
+
+        <!-- dynamic task list -->
+        <ul class="tasks-container" id="tasksList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
